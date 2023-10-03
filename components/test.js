@@ -7,7 +7,10 @@ export default function Test() {
     const hitBtn = async () => {
       const res = await fetch('/api/hello', {
         method: 'POST',
-        body: JSON.stringify({ test: 'chloe'})
+        body: JSON.stringify({ test: 'chloe'}),
+        headers: {
+          "Content-Type": "application/json",
+        }
       })
       return res.json();
     }
