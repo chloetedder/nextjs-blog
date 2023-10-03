@@ -1,4 +1,4 @@
-export default function handler(req, res) {
+export default async function handler(req, res) {
   const requestMethod = req.method;
   const body = JSON.parse(req.body);
   switch (requestMethod) {
